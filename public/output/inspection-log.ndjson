@@ -1,2 +1,2 @@
-{"type":"Browser","level":"info","message":"browsing now to https://faok.com","timestamp":"2020-01-29T16:18:40.386Z"}
-{"type":"Browser","level":"error","message":"net::ERR_CONNECTION_RESET at https://faok.com","timestamp":"2020-01-29T16:18:40.504Z"}
+{"type":"Browser","level":"info","message":"browsing now to https://faok.com","timestamp":"2020-01-29T16:24:59.568Z"}
+{"type":"Browser","level":"error","message":"net::ERR_CONNECTION_RESET at https://faok.com","timestamp":"2020-01-29T16:24:59.726Z"}
