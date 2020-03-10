@@ -1,0 +1,103 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+
+.wecForm {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.8em;
+    padding: 2em 0 0 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+    
+.wecForm * {
+    box-sizing: border-box;
+}
+    
+.wecForm label {
+    padding: 0;
+    font-weight: bold;
+    vertical-align: middle;
+}
+    
+.wecForm input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 1em;
+    padding: 7px 1px 5px 4px;
+}
+    
+.wecForm button {
+    border-radius: 0.5em;
+    background: #eee;
+    border: none;
+    font-weight: bold;
+}
+    
+.wecForm button:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+.box{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 1em;
+    text-align: center;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.container-index {
+    float: center;
+    width: 37%;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+h1 {
+    text-align:center;
+}
+
+p{
+    font-size:24px;
+    text-align:center;
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.p2{
+    font-size:16px;
+    text-align:center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+a{
+    text-align:center;
+}
+
+label{
+    font-size:16px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.logo {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+footer{
+    margin-top: 514px;
+}
+
+.breadcrumb{
+    margin: 0 0%;
+    width: 100%;
+  }

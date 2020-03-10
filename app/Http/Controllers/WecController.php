@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Wec;
+use App\Report;
+use Vinkla\Hashids\Facades\Hashids;
 
 class WecController extends Controller
 {
@@ -15,7 +16,6 @@ class WecController extends Controller
     public function index()
     {
 
-        $wec = Wec::all();
         return view('wec.index');
     }
 
@@ -37,36 +37,40 @@ class WecController extends Controller
      */
     
     public function store(Request $request)
-    {
-                
+    {    
         /* Executa comando na shell */
-    $https = request('user_website');
-    $cmd = ("website-evidence-collector --quiet --yaml --overwrite {$https} -- --no-sandbox"); 
+        $https = request('user_website');
+        $cmd = ("website-evidence-collector --quiet --yaml --overwrite {$https} -- --no-sandbox"); 
 
-    exec($cmd, $output, $result);
+        exec($cmd, $output, $result);
 
-    /*Se der erro: $result > 0 */
-    if ($result > 0){
-        return view('wec.error');
-    }    
-    
-    /* Capta ficheiro de inspecao e replica-o */
-    $file = ("../public/output/inspection.html");   
-    $dest_file = ("relatorios_wec/relatorio_WEC.html");
-    $dest_file = preg_replace("/\.[^\.]{3,4}$/i", time(). "$0", $dest_file);
-    readfile($file);
-    copy($file, $dest_file); 
-    
-    /* Guarda informaçao na BD */
-    $wec = new Wec;
-    $wec->https = request('user_website');
-    $wec->from = $request->user()->name;
-    $wec->relatorio = $dest_file;
-    $wec->save();
-
-    /* Retorna vista com o relatório de inspecao */
-    return view('wec.update')->with($file); 
+        /*Se der erro: $result > 0 */
+        if ($result > 0){
+            $wec = new Report;
+            $wec->https = request('user_website');
+            $wec->from = $request->user()->name;
+            $wec->relatorio = null;
+            $wec->save();
+            return abort(404);
+        }    
         
+        /* Capta ficheiro de inspecao e replica-o */
+        $file = ("../public/output/inspection.html");   
+        $dest_file = ("relatorios_wec/");
+        $pdf_file = ("relatorios_wec/relatorio_WEC.pdf");
+        exec("wkhtmltopdf " . $file . "  " . $pdf_file); 
+        $dest_file = uniqid($dest_file) . ".html";
+        copy($file, $dest_file); 
+
+        /* Guarda informaçao na BD */
+        $wec = new Report;
+        $wec->https = request('user_website');
+        $wec->from = $request->user()->name;
+        $wec->relatorio = $dest_file;
+        $wec->save();
+
+        /* Retorna vista com o relatório de inspecao */
+        return view('wec.inspection')->with('relatorio', $dest_file); 
     }
 
     /**
@@ -77,16 +81,39 @@ class WecController extends Controller
      */
     public function show()
     {
-        $wecs = Wec::all();
+        /* Apresenta todos os relatórios gerados previamente pelo utilizador em sessão */
+        $user = auth()->user();
+        $wecs = Report::where('from', $user->name)->get();
         return view('wec.show')->with('wecs', $wecs);
-        
+    }
+
+    public function filter(Request $request)
+    {
+        /* Apresenta todos os relatórios gerados previamente pelo utilizador em sessão */
+        $https = $request->https;
+        $user = auth()->user();
+        $wecs = Report::where('from', $user->name)->get();
+        $data = array (
+            'wecs'=> $wecs,
+            'https' => $https
+        );
+        return view('wec.filter')->with('data', $data);;
     }
 
     public function find($id)
     {
-        $wecs = Wec::find($id);
-        return view('wec.single')->with('wecs', $wecs);
-        
+        /* Encontra relatório especifico */
+        $relatorio = Report::where('id', Hashids::decode($id))->value('relatorio');
+        if ($relatorio === null){
+            return abort(404);
+        }
+        $data = array (
+            'id'=>$id,
+            'relatorio'=>$relatorio
+        );
+        $pdf_file = ("relatorios_wec/relatorio_WEC.pdf");
+        exec("wkhtmltopdf " . $data['relatorio'] . "  " . $pdf_file); 
+        return view('wec.update')->with('data', $data);         
     }
 
 /**
@@ -98,10 +125,6 @@ class WecController extends Controller
      */
     public function update(Request $request)
     {
-        
-        $https->https = request('user_website');
-        $a = system('website-evidence-collector --quiet --yaml --overwrite' . $https . '-- --no-sandbox'); 
-        return view('wec.update')->with('wec', $a);
 
     }
 

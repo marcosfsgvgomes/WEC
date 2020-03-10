@@ -1,85 +1,50 @@
 @extends('layouts.app')
 
-@section('content')
-    <title>WEC GRA</title>
-    <style>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/wec/index.css') }}" >  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        .wecForm {
-            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            font-size: 0.8em;
-            padding: 1em;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            }
-            
-            .wecForm * {
-            box-sizing: border-box;
-            }
-            
-            .wecForm label {
-            padding: 0;
-            font-weight: bold;
-            }
-            
-            .wecForm input {
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            font-size: 0.9em;
-            padding: 0.5em;
-            }
-            
-            .wecForm button {
-            padding: 0.7em;
-            border-radius: 0.5em;
-            background: #eee;
-            border: none;
-            font-weight: bold;
-            }
-            
-            .wecForm button:hover {
-            background: #ccc;
-            cursor: pointer;
-            }
+@section('content')	
 
-    </style>
-</head>
+<?php
+	use App\Report;
+?>
 
-<body>
+	<div class="breadcrumbs" aria-expanded="false">
+		{{ Breadcrumbs::render('wec') }}
+	</div>	
+    @include('layouts.drawer') 
 
-	<header>
+	<div class="container-index">  	
 		
-	</header>
-	
-	<section>
-	
-		<article>
-			<header>
-				<h2>Ferramenta WEC</h2>
-				
-			</header>
-            <p>The tool collects evidence of personal data processing, such as cookies, or requests to third parties. </p>
-		</article>
+		<div class="logo">
+			<img src="{{ asset('images/wec.png') }}" alt="logo">
+		</div>
 		
-	</section>
+		
+		<section>			
+			<article>		
+				<p>Aplicação para inspeccionar sítios de internet</p>
+				<p>Website Evidence Collector</p>
+			</article>			
+		</section>
 
-    <form class="wecForm" method="POST" action="wec/show">
-    @csrf
-        <label>Insira um URL https://</label> 
-        <input type="url" name="user_website" required placeholder="https://example.com" pattern="https://.*">
+		<form class="wecForm" method="POST" action="/wec/inspect">
+		@csrf
+			<label>Insira um URL:</label> 
+			<input type="url" size="50" name="user_website" required placeholder="https://example.com" pattern="https://.*" value="https://">
+			<button class="button" title="Inspecionar website" type="submit" value="submit"><i class="fa fa-search fa-2x"> </i></button><br><br>
+		</form>		
 
-        
-        <button type="submit" value="submit"> Inspecionar </button><br><br>
-        <a href="/wec/show">Show all</a>    
-    
-    </form>
-            
-	<aside>
-    <p>Website Evidence Collector under the European Union Public License (EUPL-1.2). </p>
-	</aside>
-
-	<footer>
-		<p> Governo Regional dos Açores </p>
-	</footer>
+        <div class="box">
+        <?php
+			$all = Report::count();
+			$sites = Report::distinct('https')->count('https');
+			$reports = Report::count('relatorio');
+		   echo "Inspeções realizadas: " . $all;  
+		   echo "<br> Sítios web inspecionados: " . $sites;   
+		   echo "<br>Relatórios gerados: " . $reports;             
+        ?> 
+		</div>
+	</div>
 
 @endsection

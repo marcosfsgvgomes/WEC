@@ -1,0 +1,26 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0px 0px 10px 0px;
+}
+
+a{
+    text-align:center;
+}
+
+h1{
+    text-align: center;
+} 
+
+img {
+    border: 0;
+    width: 100%;
+    height: auto;
+  }
+
+.logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom:80px;
+}

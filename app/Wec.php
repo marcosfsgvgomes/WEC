@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Http\Traits\Hashidable;
 
 class Wec extends Model
 {
@@ -13,3 +14,4 @@ class Wec extends Model
     //Timestamps
     public $timestamps = true;
 }
+
