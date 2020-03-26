@@ -1,0 +1,95 @@
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+
+:after {
+	content: "";
+}
+
+.sidebar {
+  	float: left;
+	position: fixed;
+  	left: -40px; 
+    background: transparent;
+    padding: 80px 0px;
+}
+
+.sidebar-link.active,
+.sidebar-link:focus{
+	color:grey !important;
+	text-decoration: none;
+}
+
+.sidebar ul {
+	text-align: center;
+}
+
+.sidebar ul li {
+	position: relative;
+  	width: 70px;
+  	cursor: pointer;
+	background: #085394;
+  	transition:all .4s ease-out;
+  	list-style-type: none;
+}
+
+.sidebar ul li:after{
+	position: absolute;
+	background: white;
+	color: #085394;
+	top:0;
+	left: 70px;
+	width: 70px; height: 100%;
+  	opacity:.5;
+  	transform: perspective(400px) rotateY(90deg);
+	transform-origin: 0 100%;
+	transition:all .4s ease-out;
+}
+
+.sidebar ul li:nth-child(1):after{  
+	content:  "Home" ;
+	line-height: 88px;	
+}
+
+.sidebar ul li:nth-child(2):after { 
+	content: "WEC";
+	line-height: 88px;
+}
+
+.sidebar ul li:nth-child(3):after { 
+	content: "Relatórios";
+	line-height: 88px;
+	font-size: 85%;
+}
+
+.sidebar ul li:nth-child(4):after { 
+	content: "Tuleap";
+	line-height: 85px;
+}
+.sidebar ul li:nth-child(5):after { 
+	content: "Definições";
+	line-height: 88px;
+	font-size: 85%;
+}
+
+.sidebar ul li:hover{
+	transform: translateX(-70px);
+}
+
+.sidebar ul li:hover:after{
+  	opacity: 1;
+	transform: perspective(400px) rotateY(0deg) scale(1) ;
+}
+
+.sidebar ul li > div{
+	display: inline-block;
+	padding: 25px 0;
+	background: transparent;
+}
+
+.sidebar ul li div { position: relative; }
+
+
+
+
+

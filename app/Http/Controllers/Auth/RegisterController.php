@@ -5,9 +5,16 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Report;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\MessageBag;
+use Illuminate\Support\Facades\Input;   
 
 class RegisterController extends Controller
 {
@@ -49,7 +56,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+         Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -63,13 +70,65 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+
+    protected function store(Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+        $validatedData = Validator::make($request->all(),[
+            'name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+
+        if ($validatedData->fails()) {
+            return redirect()->back()->withErrors($validatedData)
+            ->withInput();                                     
+        }
+
+        $user = User::create([
+            'name' => $request['name'],
+            'username' => $request['username'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+
+        auth()->login($user);
+
+        return Redirect::to("/home");    
     }
+    
+
+    protected function registration(Request $request)
+    {
+        $validatedData = Validator::make($request->all(),[
+            'name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+
+        if ($validatedData->fails()) {
+            $file = ("../public/output/inspection.html"); 
+            echo "<script>
+                alert('Cannot register');
+                </script>";
+            return view('anonymous/failedRegister')->with('relatorio', $file);                                     
+        }
+
+        $user = User::create([
+            'name' => $request['name'],
+            'username' => $request['username'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+
+        auth()->login($user);
+
+        Report::where('from', $request->session()->get('sessionid'))->
+            update(array('from'  => $request->user()->name));
+
+        return Redirect::to("/wec/show");    
+        
+    }
+
 }

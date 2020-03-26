@@ -10,16 +10,16 @@
         </div>
     </div>
     <section class="container-fluid sec-sub-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col text-left">
+        
+           
+                
                     <a href="#" class="f-light text-dark"><p4>Condições de licenciamento EUPL</p4></a>
                     <a href="#"  class="f-light text-dark"><p4>Política de cookies</p4></a>
                     <a href="#"  class="f-light text-dark"><p4>Política de privacidade</p4></a>
                     <a href="#"  class="f-light text-dark"><p4>Formulário de contato</p4></a>
-                </div><!--.col-->
-            </div><!--.row-->
-        </div>
+               
+           
+        
     </section>
 </div>
 

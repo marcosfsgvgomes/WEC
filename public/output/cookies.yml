@@ -1,0 +1,116 @@
+- name: _ga
+  value: GA1.3.1327349723.1585219629
+  domain: azores.gov.pt
+  path: /
+  expires: 1648291629
+  size: 30
+  httpOnly: false
+  secure: false
+  session: false
+  expiresUTC: 2022-03-26T10:47:09.000Z
+  expiresDays: 730
+  log:
+    stack:
+      - columnNumber: 495
+        lineNumber: 28
+        fileName: 'https://www.google-analytics.com/analytics.js'
+        functionName: zc
+        source: '    at zc (https://www.google-analytics.com/analytics.js:28:495)'
+      - columnNumber: 218
+        lineNumber: 53
+        fileName: 'https://www.google-analytics.com/analytics.js'
+        functionName: ma
+        source: '    at ma (https://www.google-analytics.com/analytics.js:53:218)'
+    type: Cookie.JS
+    timestamp: '2020-03-26T10:47:09.539Z'
+    location: 'https://op.azores.gov.pt/'
+  firstPartyStorage: false
+- name: _gid
+  value: GA1.3.257911191.1585219629
+  domain: azores.gov.pt
+  path: /
+  expires: 1585306029
+  size: 30
+  httpOnly: false
+  secure: false
+  session: false
+  expiresUTC: 2020-03-27T10:47:09.000Z
+  expiresDays: 1
+  log:
+    stack:
+      - columnNumber: 495
+        lineNumber: 28
+        fileName: 'https://www.google-analytics.com/analytics.js'
+        functionName: zc
+        source: '    at zc (https://www.google-analytics.com/analytics.js:28:495)'
+      - columnNumber: 103
+        lineNumber: 53
+        fileName: 'https://www.google-analytics.com/analytics.js'
+        functionName: ma
+        source: '    at ma (https://www.google-analytics.com/analytics.js:53:103)'
+    type: Cookie.JS
+    timestamp: '2020-03-26T10:47:09.539Z'
+    location: 'https://op.azores.gov.pt/'
+  firstPartyStorage: false
+- name: _gat
+  value: '1'
+  domain: azores.gov.pt
+  path: /
+  expires: 1585219689
+  size: 5
+  httpOnly: false
+  secure: false
+  session: false
+  expiresUTC: 2020-03-26T10:48:09.000Z
+  expiresDays: 0
+  log:
+    stack:
+      - columnNumber: 495
+        lineNumber: 28
+        fileName: 'https://www.google-analytics.com/analytics.js'
+        functionName: zc
+        source: '    at zc (https://www.google-analytics.com/analytics.js:28:495)'
+      - columnNumber: 89
+        lineNumber: 64
+        fileName: 'https://www.google-analytics.com/analytics.js'
+        functionName: Qd
+        source: '    at Qd (https://www.google-analytics.com/analytics.js:64:89)'
+    type: Cookie.JS
+    timestamp: '2020-03-26T10:47:09.539Z'
+    location: 'https://op.azores.gov.pt/'
+  firstPartyStorage: false
+- name: connect.sid
+  value: >-
+    s%3ABVhDBbS3zsNsfqrw6W4QKi1gXUQYWfeB.feFuXvbqtgPsmZQoL4sTVteX%2FKzYkoKQh9QeIQ%2FygEE
+  domain: op.azores.gov.pt
+  path: /
+  expires: -1
+  size: 95
+  httpOnly: true
+  secure: false
+  session: true
+  firstPartyStorage: true
+- name: lastPageView
+  value: '%5E'
+  domain: op.azores.gov.pt
+  path: /
+  expires: -1
+  size: 15
+  httpOnly: false
+  secure: false
+  session: true
+  log:
+    stack:
+      - columnNumber: 9818
+        lineNumber: 9
+        fileName: 'https://op.azores.gov.pt/app/vendor-5526f1e3d2.js'
+        source: '    at https://op.azores.gov.pt/app/vendor-5526f1e3d2.js:9:9818'
+      - columnNumber: 10168
+        lineNumber: 9
+        fileName: 'https://op.azores.gov.pt/app/vendor-5526f1e3d2.js'
+        functionName: Object.put
+        source: '    at Object.put (https://op.azores.gov.pt/app/vendor-5526f1e3d2.js:9:10168)'
+    type: Cookie.JS
+    timestamp: '2020-03-26T10:47:09.813Z'
+    location: 'https://op.azores.gov.pt/'
+  firstPartyStorage: true

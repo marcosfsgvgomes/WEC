@@ -27,7 +27,6 @@
             $id = Hashids::connection('main')->encode($wec->id);
             $https = $wec->https;
             $all = Report::where('https', $https)
-            ->whereNotNull('relatorio')
            ->selectRaw('https, COUNT(*) as occurrences')
            ->groupBy('https')
            ->value('occurrences');

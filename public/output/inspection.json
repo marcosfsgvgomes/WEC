@@ -1,0 +1,429 @@
+{
+  "title": "Website Evidence Collection",
+  "uri_ins": "https://op.azores.gov.pt",
+  "uri_refs": [
+    "https://op.azores.gov.pt"
+  ],
+  "uri_dest": "https://op.azores.gov.pt/",
+  "uri_redirects": [],
+  "secure_connection": {
+    "https_support": true,
+    "redirects": [
+      "https://op.azores.gov.pt"
+    ],
+    "https_redirect": true
+  },
+  "host": "op.azores.gov.pt",
+  "script": {
+    "host": "mfsgvgomes",
+    "version": {
+      "npm": "0.4.0",
+      "commit": "v0.4.0-3-g7714bda"
+    },
+    "cmd_args": "--quiet --yaml --overwrite https://op.azores.gov.pt -- --no-sandbox",
+    "node_version": "v10.15.2"
+  },
+  "browser": {
+    "name": "Chromium",
+    "version": "HeadlessChrome/79.0.3945.0",
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3617.0 Safari/537.36",
+    "platform": {
+      "name": "Linux",
+      "version": "5.3.0-42-generic"
+    }
+  },
+  "start_time": "2020-03-26T10:47:07.034Z",
+  "end_time": "2020-03-26T10:47:17.124Z",
+  "links": {
+    "firstParty": [
+      {
+        "href": "https://op.azores.gov.pt/",
+        "inner_text": "\n            Sobre\n          ",
+        "inner_html": "Sobre"
+      },
+      {
+        "href": "https://op.azores.gov.pt/antepropostas/todas",
+        "inner_text": "\n            Antepropostas\n          ",
+        "inner_html": "Antepropostas"
+      },
+      {
+        "href": "https://op.azores.gov.pt/encontros-participativos/todos",
+        "inner_text": "\n            Encontros Participativos\n          ",
+        "inner_html": "Encontros Participativos"
+      },
+      {
+        "href": "https://op.azores.gov.pt/calendario",
+        "inner_text": "\n            Calendário\n          ",
+        "inner_html": "Calendário"
+      },
+      {
+        "href": "https://op.azores.gov.pt/projetos/todos",
+        "inner_text": "\n            Projetos\n          ",
+        "inner_html": "Projetos"
+      },
+      {
+        "href": "https://op.azores.gov.pt/regras",
+        "inner_text": "REGRAS",
+        "inner_html": "Regras"
+      },
+      {
+        "href": "https://op.azores.gov.pt/faqs",
+        "inner_text": "PERGUNTAS FREQUENTES",
+        "inner_html": "Perguntas frequentes"
+      },
+      {
+        "href": "https://op.azores.gov.pt/media/noticias",
+        "inner_text": "NOTÍCIAS",
+        "inner_html": "Notícias"
+      },
+      {
+        "href": "https://op.azores.gov.pt/media/galeria",
+        "inner_text": "GALERIA",
+        "inner_html": "Galeria"
+      },
+      {
+        "href": "https://op.azores.gov.pt/termos",
+        "inner_text": "TERMOS LEGAIS",
+        "inner_html": "Termos Legais"
+      },
+      {
+        "href": "https://op.azores.gov.pt/contactos",
+        "inner_text": "CONTACTOS",
+        "inner_html": "Contactos"
+      }
+    ],
+    "thirdParty": [
+      {
+        "href": "https://www.azores.gov.pt/Portal/pt/principal/homepage.htm",
+        "inner_text": "",
+        "inner_html": "<img src=\"https://www.azores.gov.pt/PortalAzoresgov/external/comum/barra/2018/logo.GOV-AZORES.2019.png\" title=\"Azores.gov.pt - Portal do Governo dos Açores\" alt=\"Azores.gov.pt - Portal do Governo dos Açores\" width=\"150\" height=\"34\" class=\"img-border\">"
+      },
+      {
+        "href": "https://www.azores.gov.pt/Portal/pt/entidades/srapap/livres/Pagina+Barra+Topo+azores.gov.pt.htm",
+        "inner_text": "Saber mais",
+        "inner_html": "Saber mais<img src=\"https://www.azores.gov.pt/PortalAzoresgov/external/comum/barra/2018/arrow-out.png\" width=\"8\" height=\"8\" alt=\"\">"
+      },
+      {
+        "href": "https://www.instagram.com/OrcamentoParticipativoAcores/",
+        "inner_text": " ",
+        "inner_html": "<i class=\"fa fa-instagram text-branco\" aria-hidden=\"true\"></i>"
+      },
+      {
+        "href": "https://www.facebook.com/OrcamentoParticipativoAcores/",
+        "inner_text": " ",
+        "inner_html": "<i class=\"fa fa-facebook text-branco\" aria-hidden=\"true\"></i>"
+      }
+    ],
+    "social": [
+      {
+        "href": "https://www.instagram.com/OrcamentoParticipativoAcores/",
+        "inner_text": " ",
+        "inner_html": "<i class=\"fa fa-instagram text-branco\" aria-hidden=\"true\"></i>"
+      },
+      {
+        "href": "https://www.facebook.com/OrcamentoParticipativoAcores/",
+        "inner_text": " ",
+        "inner_html": "<i class=\"fa fa-facebook text-branco\" aria-hidden=\"true\"></i>"
+      }
+    ],
+    "keywords": []
+  },
+  "unsafeForms": [],
+  "browsing_history": [
+    "https://op.azores.gov.pt/"
+  ],
+  "websockets": {},
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.3.1327349723.1585219629",
+      "domain": "azores.gov.pt",
+      "path": "/",
+      "expires": 1648291629,
+      "size": 30,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "expiresUTC": "2022-03-26T10:47:09.000Z",
+      "expiresDays": 730,
+      "log": {
+        "stack": [
+          {
+            "columnNumber": 495,
+            "lineNumber": 28,
+            "fileName": "https://www.google-analytics.com/analytics.js",
+            "functionName": "zc",
+            "source": "    at zc (https://www.google-analytics.com/analytics.js:28:495)"
+          },
+          {
+            "columnNumber": 218,
+            "lineNumber": 53,
+            "fileName": "https://www.google-analytics.com/analytics.js",
+            "functionName": "ma",
+            "source": "    at ma (https://www.google-analytics.com/analytics.js:53:218)"
+          }
+        ],
+        "type": "Cookie.JS",
+        "timestamp": "2020-03-26T10:47:09.539Z",
+        "location": "https://op.azores.gov.pt/"
+      },
+      "firstPartyStorage": false
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.3.257911191.1585219629",
+      "domain": "azores.gov.pt",
+      "path": "/",
+      "expires": 1585306029,
+      "size": 30,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "expiresUTC": "2020-03-27T10:47:09.000Z",
+      "expiresDays": 1,
+      "log": {
+        "stack": [
+          {
+            "columnNumber": 495,
+            "lineNumber": 28,
+            "fileName": "https://www.google-analytics.com/analytics.js",
+            "functionName": "zc",
+            "source": "    at zc (https://www.google-analytics.com/analytics.js:28:495)"
+          },
+          {
+            "columnNumber": 103,
+            "lineNumber": 53,
+            "fileName": "https://www.google-analytics.com/analytics.js",
+            "functionName": "ma",
+            "source": "    at ma (https://www.google-analytics.com/analytics.js:53:103)"
+          }
+        ],
+        "type": "Cookie.JS",
+        "timestamp": "2020-03-26T10:47:09.539Z",
+        "location": "https://op.azores.gov.pt/"
+      },
+      "firstPartyStorage": false
+    },
+    {
+      "name": "_gat",
+      "value": "1",
+      "domain": "azores.gov.pt",
+      "path": "/",
+      "expires": 1585219689,
+      "size": 5,
+      "httpOnly": false,
+      "secure": false,
+      "session": false,
+      "expiresUTC": "2020-03-26T10:48:09.000Z",
+      "expiresDays": 0,
+      "log": {
+        "stack": [
+          {
+            "columnNumber": 495,
+            "lineNumber": 28,
+            "fileName": "https://www.google-analytics.com/analytics.js",
+            "functionName": "zc",
+            "source": "    at zc (https://www.google-analytics.com/analytics.js:28:495)"
+          },
+          {
+            "columnNumber": 89,
+            "lineNumber": 64,
+            "fileName": "https://www.google-analytics.com/analytics.js",
+            "functionName": "Qd",
+            "source": "    at Qd (https://www.google-analytics.com/analytics.js:64:89)"
+          }
+        ],
+        "type": "Cookie.JS",
+        "timestamp": "2020-03-26T10:47:09.539Z",
+        "location": "https://op.azores.gov.pt/"
+      },
+      "firstPartyStorage": false
+    },
+    {
+      "name": "connect.sid",
+      "value": "s%3ABVhDBbS3zsNsfqrw6W4QKi1gXUQYWfeB.feFuXvbqtgPsmZQoL4sTVteX%2FKzYkoKQh9QeIQ%2FygEE",
+      "domain": "op.azores.gov.pt",
+      "path": "/",
+      "expires": -1,
+      "size": 95,
+      "httpOnly": true,
+      "secure": false,
+      "session": true,
+      "firstPartyStorage": true
+    },
+    {
+      "name": "lastPageView",
+      "value": "%5E",
+      "domain": "op.azores.gov.pt",
+      "path": "/",
+      "expires": -1,
+      "size": 15,
+      "httpOnly": false,
+      "secure": false,
+      "session": true,
+      "log": {
+        "stack": [
+          {
+            "columnNumber": 9818,
+            "lineNumber": 9,
+            "fileName": "https://op.azores.gov.pt/app/vendor-5526f1e3d2.js",
+            "source": "    at https://op.azores.gov.pt/app/vendor-5526f1e3d2.js:9:9818"
+          },
+          {
+            "columnNumber": 10168,
+            "lineNumber": 9,
+            "fileName": "https://op.azores.gov.pt/app/vendor-5526f1e3d2.js",
+            "functionName": "Object.put",
+            "source": "    at Object.put (https://op.azores.gov.pt/app/vendor-5526f1e3d2.js:9:10168)"
+          }
+        ],
+        "type": "Cookie.JS",
+        "timestamp": "2020-03-26T10:47:09.813Z",
+        "location": "https://op.azores.gov.pt/"
+      },
+      "firstPartyStorage": true
+    }
+  ],
+  "localStorage": {},
+  "beacons": [
+    {
+      "url": "https://www.google-analytics.com/collect?v=1&_v=j81&a=1432815658&t=pageview&_s=2&dl=https%3A%2F%2Fop.azores.gov.pt%2F&dp=%2F&ul=en-us&de=UTF-8&dt=OP%20A%C3%A7ores&sd=24-bit&sr=1680x927&vp=1680x927&je=0&_u=KEBAAEAB~&jid=&gjid=&cid=1327349723.1585219629&tid=UA-112233134-2&_gid=257911191.1585219629&z=1361645306",
+      "query": {
+        "v": 1,
+        "_v": "j81",
+        "a": 1432815658,
+        "t": "pageview",
+        "_s": 2,
+        "dl": "https://op.azores.gov.pt/",
+        "dp": "/",
+        "ul": "en-us",
+        "de": "UTF-8",
+        "dt": "OP Açores",
+        "sd": "24-bit",
+        "sr": "1680x927",
+        "vp": "1680x927",
+        "je": 0,
+        "_u": "KEBAAEAB~",
+        "jid": "",
+        "gjid": "",
+        "cid": 1327349723.158522,
+        "tid": "UA-112233134-2",
+        "_gid": 257911191.15852195,
+        "z": 1361645306
+      },
+      "filter": "||google-analytics.com/collect",
+      "listName": "easyprivacy.txt",
+      "log": {
+        "stack": [
+          {
+            "fileName": "https://op.azores.gov.pt/",
+            "source": "requested from https://op.azores.gov.pt/ and matched with easyprivacy.txt filter ||google-analytics.com/collect"
+          }
+        ],
+        "timestamp": "2020-03-26T10:47:09.817Z"
+      },
+      "occurrances": 1
+    },
+    {
+      "url": "https://www.google-analytics.com/r/collect?v=1&_v=j81&a=1432815658&t=pageview&_s=1&dl=https%3A%2F%2Fop.azores.gov.pt%2F&dp=%2F&ul=en-us&de=UTF-8&dt=OP%20A%C3%A7ores&sd=24-bit&sr=1680x927&vp=1680x927&je=0&_u=IEBAAEAB~&jid=1697016674&gjid=423682130&cid=1327349723.1585219629&tid=UA-112233134-2&_gid=257911191.1585219629&_r=1&z=227514237",
+      "query": {
+        "v": 1,
+        "_v": "j81",
+        "a": 1432815658,
+        "t": "pageview",
+        "_s": 1,
+        "dl": "https://op.azores.gov.pt/",
+        "dp": "/",
+        "ul": "en-us",
+        "de": "UTF-8",
+        "dt": "OP Açores",
+        "sd": "24-bit",
+        "sr": "1680x927",
+        "vp": "1680x927",
+        "je": 0,
+        "_u": "IEBAAEAB~",
+        "jid": 1697016674,
+        "gjid": 423682130,
+        "cid": 1327349723.158522,
+        "tid": "UA-112233134-2",
+        "_gid": 257911191.15852195,
+        "_r": 1,
+        "z": 227514237
+      },
+      "filter": "||google-analytics.com/r/collect^",
+      "listName": "easyprivacy.txt",
+      "log": {
+        "stack": [
+          {
+            "fileName": "https://op.azores.gov.pt/",
+            "source": "requested from https://op.azores.gov.pt/ and matched with easyprivacy.txt filter ||google-analytics.com/r/collect^"
+          }
+        ],
+        "timestamp": "2020-03-26T10:47:09.544Z"
+      },
+      "occurrances": 1
+    },
+    {
+      "url": "https://www.google-analytics.com/analytics.js",
+      "query": null,
+      "filter": "||google-analytics.com/analytics.js",
+      "listName": "easyprivacy.txt",
+      "log": {
+        "stack": [
+          {
+            "fileName": "https://op.azores.gov.pt/",
+            "source": "requested from https://op.azores.gov.pt/ and matched with easyprivacy.txt filter ||google-analytics.com/analytics.js"
+          }
+        ],
+        "timestamp": "2020-03-26T10:47:09.433Z"
+      },
+      "occurrances": 1
+    }
+  ],
+  "hosts": {
+    "requests": {
+      "firstParty": [
+        "op.azores.gov.pt"
+      ],
+      "thirdParty": [
+        "fonts.googleapis.com",
+        "www.azores.gov.pt",
+        "www.google.com",
+        "www.gstatic.com",
+        "www.google-analytics.com",
+        "maps.googleapis.com",
+        "connect.facebook.net",
+        "opazores.s3.amazonaws.com",
+        "www.facebook.com"
+      ]
+    },
+    "beacons": {
+      "firstParty": [],
+      "thirdParty": [
+        "www.google-analytics.com"
+      ]
+    },
+    "cookies": {
+      "firstParty": [
+        "op.azores.gov.pt"
+      ],
+      "thirdParty": [
+        "azores.gov.pt"
+      ]
+    },
+    "localStorage": {
+      "firstParty": [],
+      "thirdParty": []
+    },
+    "links": {
+      "firstParty": [
+        "op.azores.gov.pt"
+      ],
+      "thirdParty": [
+        "www.azores.gov.pt",
+        "www.instagram.com",
+        "www.facebook.com"
+      ]
+    }
+  }
+}

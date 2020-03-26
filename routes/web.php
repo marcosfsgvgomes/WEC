@@ -1,5 +1,6 @@
 <?php
 use Vinkla\Hashids\Facadaes\Hashids;
+use Illuminate\Support\MessageBag;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,23 +14,38 @@ use Vinkla\Hashids\Facadaes\Hashids;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/* Middleware that verifies if the user is authenticated.
+If not, the user is redirect to the login screen.*/
+Route::middleware('auth')->group(function () {
+    Route::get('/wec', 'WecController@index')->name('wec');
+    Route::get('/wec/show', 'WecController@show')->name('wec.show');
+    Route::get('/wec/show/filter', 'WecController@filter')->name('wec.show.filter');
+});
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+
 Route::get('/welcome', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/wec', 'WecController@index')->name('wec');
+Route::post('/authentication', 'Auth\LoginController@authenticate');
 
-Route::get('/wec/show', 'WecController@show')->name('wec.show');
+Route::post('/register', 'Auth\RegisterController@store');
+
+Route::post('/registration', 'Auth\RegisterController@registration');
+
+Route::get('/anonymous/index', function () {
+    return view('anonymous.index');
+})->name('anonymous/index');
 
 Route::post('/wec/inspect', 'WecController@store')->name('wec.inspect');
 
-Route::get('/wec/show/filter', 'WecController@filter')->name('wec.show.filter');
+Route::post('/anonymous/inspect', 'WecController@storeAnon')->name('anonymous/inspect');
 
 Route::get('/find', function () {
     return view('wec.update');
@@ -50,5 +66,6 @@ Route::resource('wec', 'WecController',
 
 Route::fallback(function (){
     return abort(404);
-
 });
+
+

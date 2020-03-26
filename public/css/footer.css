@@ -1,28 +1,28 @@
 #content-wrap{
-    margin-bottom: 20px;
     position: relative;
 }
 
 .footer{
-    height: 80px;
     width: 100%;
     background-color: #085394;
     position: absolute;
-    bottom: -47px;
+    bottom: -64px;
 }
 
 .sec-sub-footer{
     background: #a4d9f1;    
-    text-align: right;
+    text-align: middle;
     color: #000;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
-    font-size:0.8rem;
     position: absolute;
-    bottom: -92px;
+    bottom: -114px;
+    padding-left: 27%;
 }
+
 .sec-sub-footer a{
-    font-size:0.8rem;
+    font-size:0.9rem;
+    display: inline-block;
 }
 
 .column{
@@ -43,6 +43,7 @@
 
 p4{
     margin: 0 15px;
+    vertical-align: middle;
 }
 
 img.logo_footer{

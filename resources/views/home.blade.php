@@ -4,7 +4,7 @@
 @section('content')
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+@include('layouts.drawer') 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

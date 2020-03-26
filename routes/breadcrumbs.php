@@ -23,15 +23,26 @@ Breadcrumbs::for('filter', function ($trail) {
     $trail->push('Filter', route('wec.show.filter'));
 });
 
-// Home > Wec > Show > Filter > Inspection 
+// Home > Wec > Show  > Inspection 
 Breadcrumbs::for('find', function ($trail) {
-    $trail->parent('filter');
+    $trail->parent('show');
     $trail->push('Inspection', route('wec.find'));
 });
-
 
 // Home > Wec > Inspection 
 Breadcrumbs::for('inspection', function ($trail) {
     $trail->parent('wec');
     $trail->push('Inspection', route('wec.find'));
+});
+
+// Home > Wec Anonymous 
+Breadcrumbs::for('wec_anonymous', function ($trail) {
+    $trail->parent('welcome');
+    $trail->push('WEC', route('anonymous/index'));
+});
+
+// Home > Wec Anonymous > Inspection Anonymous
+Breadcrumbs::for('anonymous_inspection', function ($trail) {
+    $trail->parent('wec_anonymous');
+    $trail->push('Inspection', route('anonymous/inspect'));
 });

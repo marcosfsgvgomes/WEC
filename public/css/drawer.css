@@ -11,6 +11,7 @@
 	position: fixed;
   	left: -40px; 
 	background: transparent;
+	padding: 75px 0px;
 }
 
 .sidebar-link.active,

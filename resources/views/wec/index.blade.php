@@ -38,7 +38,7 @@
         <div class="box">
         <?php
 			$all = Report::count();
-			$sites = Report::distinct('https')->count('https');
+			$sites = Report::distinct('https')->whereNotNull('relatorio')->count('https');
 			$reports = Report::count('relatorio');
 		   echo "Inspeções realizadas: " . $all;  
 		   echo "<br> Sítios web inspecionados: " . $sites;   
@@ -48,3 +48,11 @@
 	</div>
 
 @endsection
+
+<script>
+	var msg = '{{Session::get('alert')}}';
+	var exist = '{{Session::get('alert')}}';
+	if(exist){
+		alert(msg);
+	}
+</script>

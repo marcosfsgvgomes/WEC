@@ -8,6 +8,7 @@
     <?php
     use App\Report;
     use Vinkla\Hashids\Facades\Hashids;
+    $colors = ["category__01", "category__02", "category__03", "category__04", "category__05"];
     ?>
 
     <div class="breadcrumbs">
@@ -41,7 +42,7 @@
             <p class="category category__03"><a href="/wec/find/{{$id}}">Visualizar relatórios</p></a>
             <h2>{{$wec->https}}</h2>
             
-            <p>Relatório gerado pela ferramenta Website Evidence Collector</p>
+            <p>Relatório gerado pela ferramenta Website Evidence Collector &emsp;&emsp;&nbsp;</p> 
         </div><!-- .card-content -->
             <div class="post-meta">
                 <span class="comments"><i class="fa fa-calendar"></i> Criado a: {{$wec->created_at}}</span>

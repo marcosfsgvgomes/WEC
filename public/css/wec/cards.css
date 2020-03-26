@@ -7,14 +7,9 @@
 }
 
 body {
-  font-family: "Montserrat";
   position: relative;
   min-height: 100vh;
-  margin: 0 auto;
-}
-
-footer{
-  bottom: 0;
+  margin: 0;
 }
 
 .cards a {
@@ -34,6 +29,10 @@ h2 {
   text-transform: uppercase;
 }
 
+p{
+  font-size: 14px;
+}
+
 img {
   display: block;
     border: 0;
@@ -43,9 +42,9 @@ img {
 
 /* Remove extra left and right margins, due to padding */
 .row {
-    margin: 0 70px;
+    margin: 30px 63px;
     grid-row-gap: 40px;
-    grid-column-gap: 20px;
+    grid-column-gap: 25px;
 }
 
 /* Clear floats after the columns */
@@ -53,6 +52,10 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+
+.text-left{
+  vertical-align: top;
 }
 
 /***************************           Cards            *******************************/
@@ -122,9 +125,10 @@ img {
 .post-meta{
   border-top: 2px solid #e7e7e7;
   margin: .5rem 0 0;
-  min-height: 30px;
+  min-height: 35px;
   font-size: .8rem;
   text-align: center;
+  padding-top: 7px; 
 }
 
 .category {

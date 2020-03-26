@@ -45,6 +45,11 @@ html, body {
     text-transform: uppercase;
 }
 
+a:hover{
+    color: #a9a9a9;
+    text-decoration: underline;
+}
+
 .m-b-md {
     margin-bottom: 30px;
 }

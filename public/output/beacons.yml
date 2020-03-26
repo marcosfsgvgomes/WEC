@@ -1,0 +1,81 @@
+- url: >-
+    https://www.google-analytics.com/collect?v=1&_v=j81&a=1432815658&t=pageview&_s=2&dl=https%3A%2F%2Fop.azores.gov.pt%2F&dp=%2F&ul=en-us&de=UTF-8&dt=OP%20A%C3%A7ores&sd=24-bit&sr=1680x927&vp=1680x927&je=0&_u=KEBAAEAB~&jid=&gjid=&cid=1327349723.1585219629&tid=UA-112233134-2&_gid=257911191.1585219629&z=1361645306
+  query:
+    v: 1
+    _v: j81
+    a: 1432815658
+    t: pageview
+    _s: 2
+    dl: 'https://op.azores.gov.pt/'
+    dp: /
+    ul: en-us
+    de: UTF-8
+    dt: OP Açores
+    sd: 24-bit
+    sr: 1680x927
+    vp: 1680x927
+    je: 0
+    _u: KEBAAEAB~
+    jid: ''
+    gjid: ''
+    cid: 1327349723.158522
+    tid: UA-112233134-2
+    _gid: 257911191.15852195
+    z: 1361645306
+  filter: '||google-analytics.com/collect'
+  listName: easyprivacy.txt
+  log:
+    stack:
+      - fileName: 'https://op.azores.gov.pt/'
+        source: >-
+          requested from https://op.azores.gov.pt/ and matched with
+          easyprivacy.txt filter ||google-analytics.com/collect
+    timestamp: '2020-03-26T10:47:09.817Z'
+  occurrances: 1
+- url: >-
+    https://www.google-analytics.com/r/collect?v=1&_v=j81&a=1432815658&t=pageview&_s=1&dl=https%3A%2F%2Fop.azores.gov.pt%2F&dp=%2F&ul=en-us&de=UTF-8&dt=OP%20A%C3%A7ores&sd=24-bit&sr=1680x927&vp=1680x927&je=0&_u=IEBAAEAB~&jid=1697016674&gjid=423682130&cid=1327349723.1585219629&tid=UA-112233134-2&_gid=257911191.1585219629&_r=1&z=227514237
+  query:
+    v: 1
+    _v: j81
+    a: 1432815658
+    t: pageview
+    _s: 1
+    dl: 'https://op.azores.gov.pt/'
+    dp: /
+    ul: en-us
+    de: UTF-8
+    dt: OP Açores
+    sd: 24-bit
+    sr: 1680x927
+    vp: 1680x927
+    je: 0
+    _u: IEBAAEAB~
+    jid: 1697016674
+    gjid: 423682130
+    cid: 1327349723.158522
+    tid: UA-112233134-2
+    _gid: 257911191.15852195
+    _r: 1
+    z: 227514237
+  filter: '||google-analytics.com/r/collect^'
+  listName: easyprivacy.txt
+  log:
+    stack:
+      - fileName: 'https://op.azores.gov.pt/'
+        source: >-
+          requested from https://op.azores.gov.pt/ and matched with
+          easyprivacy.txt filter ||google-analytics.com/r/collect^
+    timestamp: '2020-03-26T10:47:09.544Z'
+  occurrances: 1
+- url: 'https://www.google-analytics.com/analytics.js'
+  query: null
+  filter: '||google-analytics.com/analytics.js'
+  listName: easyprivacy.txt
+  log:
+    stack:
+      - fileName: 'https://op.azores.gov.pt/'
+        source: >-
+          requested from https://op.azores.gov.pt/ and matched with
+          easyprivacy.txt filter ||google-analytics.com/analytics.js
+    timestamp: '2020-03-26T10:47:09.433Z'
+  occurrances: 1
